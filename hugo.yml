@@ -1,0 +1,19 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+
+# Default
+permalinks:
+  taxonomy:
+    persons_awards: /team/awards/
+  term:
+    persons_awards: /team/awards/:slug/
+taxonomies:
+  persons_award: persons_awards

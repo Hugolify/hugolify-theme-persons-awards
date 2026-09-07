@@ -1,0 +1,8 @@
+{{ define "hero"}}
+  {{- partial "persons_awards/hero-single.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "persons_awards/schema-single.html" . }}
+  {{ partial "persons_awards/container-single.html" . }}
+{{ end }}
