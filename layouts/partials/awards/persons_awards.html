@@ -1,5 +1,16 @@
-{{ partial "commons/latest-pages-by-taxonomy" (dict 
-  "section" "persons" 
+{{- $section := "persons" }}
+{{- $pages := partial "func/GetPagesFromTaxonomy" (dict
+  "section" $section
   "taxonomy" "persons_awards"
-  "name" .Title
-  "filename" .File.TranslationBaseName) }}
+  "slug" .File.ContentBaseName
+  "title" .Title) }}
+{{- $pages = partial "func/GetPersonsOrderByStatutes" $pages }}
+
+{{- with $pages }}
+  {{- $title := partial "func/PrepareHTML.html" $.Title }}
+  {{- partial "commons/related.html" (dict
+    "section" $section
+    "pages" .
+    "title" (i18n "persons_awards.discover_persons" (dict "Title" $title))
+  ) }}
+{{- end }}

@@ -1,0 +1,11 @@
+/* components/persons-award.css */
+/*
+ * Usage: <article class="item persons_award">
+ */
+@layer components {
+  .persons_award {
+    .btn {
+      display: none;
+    }
+  }
+}

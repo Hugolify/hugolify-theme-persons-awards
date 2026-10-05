@@ -1,0 +1,12 @@
+/* css/modules/persons-awards.css — hugolify-theme-persons-awards entry point */
+
+/* Tokens */
+@import '../tokens/persons-awards.css';
+
+/* Components */
+@import '../components/persons-award.css';
+@import '../components/persons-awards.css';
+
+/* Pages */
+@import '../pages/persons-award.css';
+@import '../pages/persons-awards.css';

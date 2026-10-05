@@ -1,4 +1,7 @@
 persons_awards:
+  discover_persons:
+    one: Lauréat de {{ .Title }}
+    other: Lauréats de {{ .Title }}
   title:
     one: Award
     other: Awards
